@@ -1,0 +1,19 @@
+.bar{
+	@include viewport-section ();
+	background: #f8faf9;
+	position: relative;
+
+	.container{
+		@include flexible-center ();
+
+		&:before{
+			content: url(../img/bg/barChocco-bg2.png);
+			position: absolute;
+			display: block;
+			width: rem(175px);
+			height: rem(404px);
+			right: 0;
+			bottom: -10rem;
+		}
+	}
+}

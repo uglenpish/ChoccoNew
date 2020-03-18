@@ -1,0 +1,28 @@
+.present{
+	@include viewport-section ();
+	position: relative;
+
+	&:before{
+  	content: url(../img/bg/present-bg.png);
+  	display: block;
+  	position: absolute;
+  	bottom: -13%;
+  	right: 0;
+  	z-index: 1;
+  }
+
+	.container{
+		@include flexible-column ();
+	}
+}
+
+.video{
+	width: rem(660px);
+	height: rem(406px);
+
+	&__dummy{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

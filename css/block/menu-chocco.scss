@@ -1,0 +1,106 @@
+.menu-chocco{
+	@include viewport-section();
+	background: url(../img/bg/menu-bg2.png) center center/cover no-repeat;
+	color: #ffffff;
+	position: relative;
+
+	.title{
+		position: absolute;
+		top: 15%;
+		left: 10%;
+		color:  #ffffff;
+		@include phones{
+    	top: 15%;
+			left: 3%;
+  	}
+	}
+}
+
+
+
+
+.accordion__list{
+	display: flex;
+	justify-content: flex-end;
+	max-height: 100%;
+	height: 100%;
+ 	position: relative;
+ 	z-index: 10;
+
+	.accordion__item{
+		display: flex;
+		justify-content: flex-end;
+		
+    &-title{
+			font-size: rem(48px);
+			font-weight: 700;
+			width: rem(100px);
+			height: 100%;
+			padding-left: 0.9375rem;
+    	padding-bottom: 2.5rem;
+    	@include phones{
+    		width: rem(80px);
+  		}
+
+			.rotate{
+    		writing-mode: vertical-lr;
+    		transform: rotate(180deg);
+				height: 100%;
+    	}
+		}
+
+		&-text{
+			width: 0;
+			background-color: rgba(51, 53, 55, 0.9);
+			position: relative;
+			overflow: hidden;
+			transition: width 1s;
+
+			.text{
+				color: #fff;
+				text-align: left;
+				width: 70%;
+				margin-left: rem(20px);
+				margin-top: rem(90px);
+			}
+
+			.close__btn{
+				border: none;
+    		background: none;
+    		cursor: pointer;
+    		position: absolute;
+    		top: 1.5625rem;
+    		right: 1.875rem;
+    		z-index: 1;
+			}
+		}
+
+		&-text--activ{
+			// width: rem(520px);
+			width: 55%;
+
+			@include tablets{
+ 				width: 0 !important;
+			}
+		}
+	}
+}
+
+
+
+.bg-milk--modify{
+	background: url(../img/bg/milk-menu.png)
+	center center/cover no-repeat;
+	opacity: 1;
+}
+
+.bg-honey--modify{
+	background: url(../img/bg/honey-menu.png) 
+	center center/cover no-repeat;
+	opacity: 1;
+}
+
+.bg-berries--modify{
+	background: url(../img/bg/berries-menu.png) 
+	center center/cover no-repeat;
+}

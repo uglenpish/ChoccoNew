@@ -1,0 +1,18 @@
+//настройки
+@import "./style/mixins";
+@import "./style/layout.scss";
+
+//block
+
+@import "./block/welcome.scss";
+@import "./block/heder.scss";
+@import "./block/hero.scss";
+@import "./block/best.scss";
+@import "./block/reviews.scss";
+@import "./block/team.scss"; 
+@import "./block/menu-chocco.scss";
+@import "./block/form.scss";
+@import "./block/present.scss";
+@import "./block/map.scss";
+@import "./block/bar.scss";
+@import "./block/footer.scss";

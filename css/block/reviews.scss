@@ -1,0 +1,92 @@
+.reviews{
+	@include viewport-section ();
+	position: relative;
+
+	.container{
+		@include flexible-column ();
+	}
+}
+
+
+.card{
+	@include flexible-center () ;
+	width: 100%;
+	filter: drop-shadow(-10.649px 7.456px 15px rgba(151,167,156,0.17));
+	background-color: #f8faf9;
+	justify-content: left;
+	margin-bottom: rem(20px);
+	background-image:  url(../img/bg/bg-card.png);
+	background-position: right top;
+	background-repeat: no-repeat;
+	padding: rem(50px) rem(45px) rem(35px); 
+	@include tablets{
+ 		@include flexible-column();
+	}
+	
+	
+  
+	&__avatar{
+		width: rem(256px);
+		height: rem(256px);
+		overflow: hidden;
+		margin-right: rem(10px);
+		@include tablets{
+ 			width: rem(130px);
+			height: rem(133px);
+			margin-right: 0;
+			margin-bottom: rem(25px);
+		}
+	}
+
+  &__content{
+  	width: rem(450px);
+  	vertical-align: top;
+  	@include tablets{
+ 			text-align: center;
+		}
+  	
+  	&-subtitle{
+			font-size: rem(30px);
+			color: #000000;
+			font-weight: 700;
+			margin-bottom: rem(30px);
+		}
+
+		&-text{
+			font-size: rem(18px);
+			color: #666666;
+			margin-bottom: rem(25px);
+		}
+
+		&-name{
+			font-size: rem(18px);
+			color: #000000;
+			font-weight: 500;
+		}
+	}	
+}
+
+
+.photo{
+	&__list{
+		@include flexible-center ();
+	}
+	&__item{
+		width: rem(80px);
+		height: rem(80px);
+		border: rem(6px) solid transparent;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: rem(15px);
+		&:last-child{
+			margin-right: 0;
+		}
+		&:hover{
+			border: rem(6px) solid #355a49;
+		}
+
+		&--active{
+			border: rem(6px) solid #355a49;
+		}
+	}	
+}

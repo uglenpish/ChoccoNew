@@ -1,0 +1,50 @@
+.hero{
+	position: relative;
+	width: rem(360px);
+  margin-bottom: rem(50px);
+ 	@include flexible-column ();
+ 	align-items: flex-start;
+
+ 	@include tablets{
+ 		width: 90%;
+		align-items: center;
+		text-align: center;
+	}
+	
+	@include phones{
+    max-height: 70%;
+  }
+
+
+	&__media{
+		display: none;
+		
+
+		@include tablets{
+    	display: initial;
+			margin-bottom: rem(20px);
+  	}
+	}
+	
+	.title{
+		color: #ffffff;
+
+		@include tablets{
+    	text-align: inherit;
+  	}
+	}
+
+	&__text{
+		font-size: rem(21px);
+		color: #ffffff;
+		margin-bottom: rem(25px);
+
+		@include tablets{
+    	width: 70%;
+  	}
+
+  	@include phones{
+    	width: 100%;
+  	}
+	}
+}

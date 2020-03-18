@@ -1,0 +1,110 @@
+@font-face{
+  font-family: "";
+  src: url();
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+button{
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  &:focus{
+    outline: none;
+  }
+}
+
+body{
+  margin: 0;
+}
+
+html{
+  font-size: rem(16px);
+  @include tablets{
+    font-size: rem(15px);
+  }
+  @include phones{
+    font-size: rem(14px);
+  }
+}
+
+.wrapper{
+  height: 100%;
+  width: 100%;
+  font-family: "Alegreya Sans";
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.container{
+  max-width: 940px;
+  height: 100%;
+  margin: 0 auto;
+  width: 95%;
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    max-width: 720px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .container{
+    max-width: 460px;
+  }
+}
+
+.title{
+  font-size: rem(48px);
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: rem(20px);
+
+  @include phones{
+    font-size: rem(40px);
+  }
+}
+
+.btn{
+  display: inline-block;
+  font-size: rem(19px);
+  color: #365a49;
+  font-weight: 800; 
+  border-radius: rem(29px);
+  background-color: #ffffff;
+  padding: rem(20px) rem(35px);
+  text-transform: uppercase;
+  z-index: 2;
+  &:hover{
+    color: #ffffff;
+    background-color: #365a49;
+    z-index: 2;
+  }
+}

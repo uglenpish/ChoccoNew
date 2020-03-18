@@ -1,0 +1,77 @@
+.header{
+	@include flexible-center ();
+	justify-content: space-between;
+ 	padding: 20px 0;
+ 	width: 100%;
+	margin-bottom: 80px;
+	position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.logo{
+	display: block;
+	width: 55px;
+	height: 40px;
+}
+
+.menu{
+	@include tablets{
+		display: none;
+	}
+
+	&__list{
+		@include flexible-center ();
+	}
+	&__item{
+		margin-right: 20px;
+		&:last-child{
+			margin-right: 0px;
+		}
+	}
+	&__link{
+	font-size: 18px;
+	color: #ffffff;
+	font-family: "Alegreya Sans";
+	font-weight: 400;
+
+	}
+}
+
+.contacts{
+	&__tel{
+	font-size: 24px;
+	color: #ffffff;
+	font-family: "Alegreya Sans";
+	font-weight: 400;
+	position: relative;
+
+	@include tablets{
+		display: none;
+	}
+
+
+		&:before{
+			content: '';
+			display: inline-block;
+			margin-right: 10px;
+			width: 15px;
+			height: 14px;
+			background: url(../img/icon/phone%20.png) no-repeat;
+		}
+	}
+}
+
+.hamburger{
+	display: none;
+
+	@include tablets{
+		display: initial;
+	}
+	.hamburger__img{
+		width: 27px;
+		height: 23px;
+	}
+}

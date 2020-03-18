@@ -1,0 +1,81 @@
+.welcome{
+	@include viewport-section ();
+	background: url(../img/bg/hero-choccoBg.png) 
+	78% center/40% no-repeat,  
+	url(../img/bg/fon-hero.png) 
+	right center/contain no-repeat, 
+	#86c3d7;
+	@include tablets{
+		background: url(../img/bg/fon-hero.png) 
+		right 20%/70% no-repeat, #86c3d7;
+	}
+
+	.container{
+		position: relative;
+		@include flexible-column ();
+		align-items: flex-start;
+		@include tablets{
+			align-items: center;
+		}
+
+		&:after{
+  		content: url(../img/bg/hero-berriesBg.png);
+  		display: block;
+  		position: absolute;
+  		bottom: rem(-50px);
+  		right: 0;
+
+  		@include tablets{
+				content: none;
+			}
+  	}
+	}
+}
+
+.perfect{
+
+	@include tablets{
+		display: none;
+	}
+	&-list{
+		@include flexible-center ();
+		justify-content: left;
+	}
+	&-item{
+		width: rem(140px);
+		display: flex;
+		margin-right: rem(40px);
+		&:last-child{
+			margin-right: 0;
+		}
+		&__icon{
+			display: inline-block;
+			width: rem(50px);
+			height: rem(45px);
+			margin-right: rem(8px);
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+		&__title{
+			font-size: rem(16px);
+			color: #ffffff;
+		}
+	}
+}
+
+// @media screen and (max-width: 768px){
+// 	.welcome{
+// 		background: url(../img/bg/fon-hero.png) 
+// 		right 20%/70% no-repeat,
+// 		#86c3d7;
+
+// 		.container{
+// 			align-items: center;
+
+// 			&:after{
+// 				content: none;
+// 			}
+// 		}
+// 	}
+// }
