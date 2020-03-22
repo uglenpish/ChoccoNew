@@ -1,0 +1,24 @@
+.pagination {
+  position: fixed;
+  top: 13.4375rem;
+  right: 2.5rem;
+}
+.pagination .pagination__item {
+  margin-bottom: rem(10px);
+}
+.pagination .pagination__item-link {
+  position: relative;
+  width: rem(17px);
+  height: rem(17px);
+  display: block;
+}
+.pagination .pagination__item-link:after {
+  content: "";
+  display: inline-block;
+  width: rem(6px);
+  height: rem(6px);
+  background: #fff;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+}

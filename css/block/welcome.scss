@@ -41,23 +41,25 @@
 		@include flexible-center ();
 		justify-content: left;
 	}
-	&-item{
+	&__item{
 		width: rem(140px);
 		display: flex;
 		margin-right: rem(40px);
 		&:last-child{
 			margin-right: 0;
 		}
-		&__icon{
-			display: inline-block;
-			width: rem(50px);
-			height: rem(45px);
-			margin-right: rem(8px);
+		&-icon{
+			width: 3.125rem;
+  		height: 2.625rem;
+  		margin-right: 6%;
+  		z-index: 2;
+  		fill: #c6f7ff;
+			
 			&:last-child{
 				margin-right: 0;
 			}
 		}
-		&__title{
+		&-title{
 			font-size: rem(16px);
 			color: #ffffff;
 		}

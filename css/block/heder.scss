@@ -63,6 +63,17 @@
 		}
 	}
 }
+@include tablets{
+	.menu__burger--activ{
+		width: 100vw;
+		height: 100vh;
+
+		.menu__list{
+			@include flexible-column();
+			
+		}
+	}
+}
 
 .hamburger{
 	display: none;
@@ -70,8 +81,9 @@
 	@include tablets{
 		display: initial;
 	}
-	.hamburger__img{
-		width: 27px;
-		height: 23px;
+	.hamburger__icon {
+  	width: 1.5rem;
+  	height: 1.5rem;
+  	fill: white;
 	}
 }

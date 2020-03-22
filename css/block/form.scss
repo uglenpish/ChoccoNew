@@ -4,38 +4,44 @@
 	background-image: url(../img/bg/bg-form.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
+	position: relative;
+
+	&:after{
+		content: url(../img/bg/berries-formBG.png);
+		display: block;
+		position: absolute;
+		bottom: 10%;
+		left: 0;
+		z-index: 1;
+
+		@include tablets{
+			content: none;
+		}
+	}
+
+	&:before{
+		content: url(../img/bg/sheet-formBg.png);
+		display: block;
+		position: absolute;
+		bottom: 10%;
+		right: 0;
+		z-index: 1;
+
+		@include tablets{
+			content: none;
+		}
+	}
+
 	.container{
 		@include flexible-column ();
-		justify-content: flex-start;
 		position: relative;
-		&:before{
-  		content: url(../img/bg/sheet-formBg.png);
-  		display: block;
-  		position: absolute;
-  		bottom: 10%;
-  		right: 0;
-  		z-index: 1;
+		
 
-  		@include tablets{
-  			content: none;
-  		}
-  	}
-
-  	&:after{
-  		content: url(../img/bg/berries-formBG.png);
-  		display: block;
-  		position: absolute;
-  		bottom: 10%;
-  		left: 0;
-  		z-index: 1;
-
-  		@include tablets{
-  			content: none;
-  		}
-  	}
+  	
 
 		.title{
 			padding: rem(76px) 0 rem(21px);
+			z-index: 10;
 		}
 	}
 }
@@ -136,10 +142,11 @@
 		position: relative;
     display: block;
     height: rem(22px);
-    width: rem(22px);
+    width: 1.375rem;
     border-radius: 50%;
     background: #ffffff;
     margin-right: rem(6px);
+    flex-shrink: 0;
     &:last-child{
     	margin-right: 0;
     }
@@ -164,7 +171,7 @@
 }
 
 .form__radio-input:checked + .form__checkbox:before{
-	background: #355a49;
+	opacity: 1;
 }
 
 .form__checkbox{
@@ -176,16 +183,17 @@
   margin-right: rem(6px);
   
   &:before{
-    content: '';
+    content:  url(../svg/chek-form.svg);
    	display: inline-block;
     height: rem(5px);
     width: rem(5px);
     border-radius: 50%;
     background: transparent;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    // top: 50%;
+    // left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
   }
 }
 

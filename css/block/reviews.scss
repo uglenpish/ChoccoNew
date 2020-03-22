@@ -2,6 +2,33 @@
 	@include viewport-section ();
 	position: relative;
 
+	&:after{
+		content: url(../img/bg/riviews-bottomBg.png);
+		display: block;
+		position: absolute;
+		bottom: -14%;
+		left: 0;
+		z-index: 1;
+
+		// @include tablets{
+		// 	content: none;
+		// }
+	}
+
+	&:before{
+		content: url(../img/bg/reviews-topBg.png);
+		display: block;
+		position: absolute;
+		top: 8%;
+		right: 0;
+		z-index: 1;
+
+		// @include tablets{
+		// 	content: none;
+		// }
+	}
+
+
 	.container{
 		@include flexible-column ();
 	}
@@ -23,18 +50,20 @@
  		@include flexible-column();
 	}
 	
-	
-  
 	&__avatar{
 		width: rem(256px);
 		height: rem(256px);
 		overflow: hidden;
-		margin-right: rem(10px);
+		margin-right: rem(25px);
 		@include tablets{
  			width: rem(130px);
 			height: rem(133px);
 			margin-right: 0;
 			margin-bottom: rem(25px);
+		}
+
+		.card__pictures{
+			@include img-reviews();
 		}
 	}
 
@@ -43,6 +72,7 @@
   	vertical-align: top;
   	@include tablets{
  			text-align: center;
+ 			width: inherit;
 		}
   	
   	&-subtitle{

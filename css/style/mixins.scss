@@ -25,6 +25,12 @@
   flex-direction: column;
 }
 
+@mixin img-reviews(){
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 @function rem($px) {
   @return $px / 16px + 0rem;
 }

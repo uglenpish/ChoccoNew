@@ -47,10 +47,13 @@
 					<div class="contacts">
 						<a href="tel.88009039090" class="contacts__tel">8 800 903 90 90</a>
 					</div>
-					<div class="hamburger">
-						<img src="img/icon/hamburger.svg" alt="" class="hamburger__img">
-					</div>
+					<button class="hamburger">
+						<svg class='hamburger__icon'>
+            	<use xlink:href='./svg/sprite.svg#hamburger'></use>
+          	</svg>
+					</button>
 				</header>
+				
 				<div class="hero">
 					<div class="hero__media">
 						<img src="img/hero-media768.png" alt="" class="hero__media-img">
@@ -63,17 +66,23 @@
 				</div>
 				<div class="perfect">
 					<ul class="perfect-list">
-						<li class="perfect-item">
-							<img src="img/icon/5.svg" alt="Иконка" class="perfect-item__icon">
-							<span class="perfect-item__title">100% натуральный продукт</span>
+						<li class="perfect__item">
+							<svg class="perfect__item-icon">
+                <use xlink:href='./svg/sprite.svg#leaf'/>
+              </svg>
+							<span class="perfect__item-title">100% натуральный продукт</span>
 						</li>
-						<li class="perfect-item">
-							<img src="img/icon/6.svg" alt="Иконка" class="perfect-item__icon">
-							<span class="perfect-item__title">3-5 дней на доставку по РФ</span>
+						<li class="perfect__item">
+							<svg class="perfect__item-icon">
+                <use xlink:href='./svg/sprite.svg#car'/>
+              </svg>
+							<span class="perfect__item-title">3-5 дней на доставку по РФ</span>
 						</li>
-						<li class="perfect-item">
-							<img src="img/icon/4.svg" alt="Иконка" class="perfect-item__icon">
-							<span class="perfect-item__title">Не портит фигуру</span>
+						<li class="perfect__item">
+							<svg class="perfect__item-icon">
+                <use xlink:href='./svg/sprite.svg#meter'/>
+              </svg>
+							<span class="perfect__item-title">Не портит фигуру</span>
 						</li>
 					</ul>
 				</div>
@@ -204,7 +213,7 @@
 				</li>
 				<li class="accordion__item">
 					<div class="accordion__item-title bg-honey--modify">
-						<div class="rotate">Батончики с молоком</div> 
+						<div class="rotate">С медом и фруктами</div> 
 					</div>
 					<div class="accordion__item-text">
 						<p class="text">
@@ -213,8 +222,8 @@
 					</div>
 				</li>
 				<li class="accordion__item">
-					<div class="accordion__item-title bg-honey--modify">
-						<div class="rotate">Батончики с молоком</div> 
+					<div class="accordion__item-title bg-berries--modify">
+						<div class="rotate">Лесные ягоды</div> 
 					</div>
 					<div class="accordion__item-text">
 						<p class="text">
@@ -358,22 +367,30 @@
 						<ul class="socials__list">
          			<li class="socials__item">
           			<a href="#" class="socials__link">
-            			<img src="img/icon/vk.svg" alt="socia" class="socials__link-icon">
+            			<svg class="socials__item-icon">
+                    <use xlink:href='svg/sprite.svg#vk-icon'></use>
+                  </svg>
           			</a>
          			</li>
           		<li class="socials__item">
           			<a href="#" class="socials__link">
-            			<img src="img/icon/f.svg" alt="socials" class="socials__link-icon">
+            			<svg class="socials__item-icon">
+                    <use xlink:href='./svg/sprite.svg#fb-icon'></use>
+                  </svg>
           			</a>
          			</li>
          			<li class="socials__item">
             		<a href="#" class="socials__link">
-          				<img src="img/icon/in.svg" alt="socials" class="socials__link-icon">
+          				<svg class="socials__item-icon">
+                    <use xlink:href='./svg/sprite.svg#inst-icon'></use>
+                  </svg>
             		</a>
           		</li>
           		<li class="socials__item">
             		<a href="#" class="socials__link">
-              		<img src="img/icon/tv.svg" alt="socials" class="socials__link-icon">
+              		<svg class="socials__item-icon">
+                    <use xlink:href='./svg/sprite.svg#tw-icon'></use>
+                  </svg>
             		</a>
          			</li>
 						</ul>
@@ -382,5 +399,37 @@
 			</footer>
 		</section>
 	</div>
+	<div class="pagination">
+		<ul class="pagination__list">
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+			<li class="pagination__item">
+				<a href="" class="pagination__item-link"></a>
+			</li>
+		</ul>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>

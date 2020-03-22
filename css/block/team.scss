@@ -80,8 +80,9 @@
 						content: '';
 						position: absolute;
 						top: rem(7px);
+						right: rem(-22px);
 						border: rem(8px) solid transparent;
-						border-top: rem(8px) solid green;
+						border-top: rem(8px) solid #365a49;
 					}
 				}
 				&__dropdown{
@@ -105,7 +106,7 @@
 					
 	.accordion__name:after{
 		border-top-width: 0 !important;
-		border-bottom: rem(8px) solid green !important;
+		border-bottom: rem(8px) solid #365a49 !important;
 	}
 					
 	.accordion__dropdown{

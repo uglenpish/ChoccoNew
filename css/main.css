@@ -168,24 +168,25 @@ html {
   align-items: center;
   justify-content: left;
 }
-.perfect-item {
+.perfect__item {
   width: 8.75rem;
   display: flex;
   margin-right: 2.5rem;
 }
-.perfect-item:last-child {
+.perfect__item:last-child {
   margin-right: 0;
 }
-.perfect-item__icon {
-  display: inline-block;
+.perfect__item-icon {
   width: 3.125rem;
-  height: 2.8125rem;
-  margin-right: 0.5rem;
+  height: 2.625rem;
+  margin-right: 6%;
+  z-index: 2;
+  fill: #c6f7ff;
 }
-.perfect-item__icon:last-child {
+.perfect__item-icon:last-child {
   margin-right: 0;
 }
-.perfect-item__title {
+.perfect__item-title {
   font-size: 1rem;
   color: #ffffff;
 }
@@ -255,6 +256,18 @@ html {
   background: url(../img/icon/phone%20.png) no-repeat;
 }
 
+@media screen and (max-width: 768px) {
+  .menu__burger--activ {
+    width: 100vw;
+    height: 100vh;
+  }
+  .menu__burger--activ .menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .hamburger {
   display: none;
 }
@@ -263,9 +276,27 @@ html {
     display: initial;
   }
 }
-.hamburger .hamburger__img {
-  width: 27px;
-  height: 23px;
+.hamburger .hamburger__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: white;
+}
+
+.tablets__menu {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: #343739;
+}
+.tablets__menu .menu__list {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tablets__menu .menu__list .menu__item {
+  margin-bottom: 30px;
 }
 
 .hero {
@@ -405,6 +436,24 @@ html {
   text-align: center;
   flex: 1;
   margin-right: 0.3125rem;
+  position: relative;
+}
+.advantage .advantage__item:before {
+  content: url(../img/icon/best-decor.svg);
+  position: absolute;
+  top: 2.8125rem;
+  left: -14%;
+}
+.advantage .advantage__item:first-child:before {
+  content: none;
+}
+.advantage .advantage__item:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .advantage .advantage__item:before {
+    content: none;
+  }
 }
 @media screen and (max-width: 480px) {
   .advantage .advantage__item {
@@ -413,6 +462,10 @@ html {
     align-items: center;
     width: auto;
     margin-bottom: 2.5rem;
+    margin-right: 0;
+  }
+  .advantage .advantage__item:last-child {
+    margin-bottom: 0;
   }
 }
 .advantage .advantage__item-icon {
@@ -481,6 +534,22 @@ html {
     min-height: 50rem;
   }
 }
+.reviews:after {
+  content: url(../img/bg/riviews-bottomBg.png);
+  display: block;
+  position: absolute;
+  bottom: -14%;
+  left: 0;
+  z-index: 1;
+}
+.reviews:before {
+  content: url(../img/bg/reviews-topBg.png);
+  display: block;
+  position: absolute;
+  top: 8%;
+  right: 0;
+  z-index: 1;
+}
 .reviews .container {
   display: flex;
   justify-content: center;
@@ -514,7 +583,7 @@ html {
   width: 16rem;
   height: 16rem;
   overflow: hidden;
-  margin-right: 0.625rem;
+  margin-right: 1.5625rem;
 }
 @media screen and (max-width: 768px) {
   .card__avatar {
@@ -524,6 +593,11 @@ html {
     margin-bottom: 1.5625rem;
   }
 }
+.card__avatar .card__pictures {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .card__content {
   width: 28.125rem;
   vertical-align: top;
@@ -531,6 +605,7 @@ html {
 @media screen and (max-width: 768px) {
   .card__content {
     text-align: center;
+    width: inherit;
   }
 }
 .card__content-subtitle {
@@ -681,8 +756,9 @@ html {
   content: "";
   position: absolute;
   top: 0.4375rem;
+  right: -1.375rem;
   border: 0.5rem solid transparent;
-  border-top: 0.5rem solid green;
+  border-top: 0.5rem solid #365a49;
 }
 .employee__list .employee__item .accordion__dropdown {
   transition: max-height 0.5s;
@@ -700,7 +776,7 @@ html {
 }
 .show--activ .accordion__name:after {
   border-top-width: 0 !important;
-  border-bottom: 0.5rem solid green !important;
+  border-bottom: 0.5rem solid #365a49 !important;
 }
 .show--activ .accordion__dropdown {
   height: 100% !important;
@@ -713,6 +789,8 @@ html {
   background: url(../img/bg/menu-bg2.png) center center/cover no-repeat;
   color: #ffffff;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 768px) {
   .menu-chocco {
@@ -739,15 +817,12 @@ html {
 
 .accordion__list {
   display: flex;
-  justify-content: flex-end;
-  max-height: 100%;
   height: 100%;
   position: relative;
   z-index: 10;
 }
 .accordion__list .accordion__item {
   display: flex;
-  justify-content: flex-end;
 }
 .accordion__list .accordion__item-title {
   font-size: 3rem;
@@ -755,7 +830,7 @@ html {
   width: 6.25rem;
   height: 100%;
   padding-left: 0.9375rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 4.5rem;
 }
 @media screen and (max-width: 480px) {
   .accordion__list .accordion__item-title {
@@ -791,7 +866,7 @@ html {
   z-index: 1;
 }
 .accordion__list .accordion__item-text--activ {
-  width: 55%;
+  width: 32.5rem;
 }
 @media screen and (max-width: 768px) {
   .accordion__list .accordion__item-text--activ {
@@ -821,6 +896,7 @@ html {
   background-image: url(../img/bg/bg-form.png);
   background-repeat: no-repeat;
   background-size: 100%;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .form-chocco {
@@ -832,28 +908,7 @@ html {
     min-height: 50rem;
   }
 }
-.form-chocco .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-}
-.form-chocco .container:before {
-  content: url(../img/bg/sheet-formBg.png);
-  display: block;
-  position: absolute;
-  bottom: 10%;
-  right: 0;
-  z-index: 1;
-}
-@media screen and (max-width: 768px) {
-  .form-chocco .container:before {
-    content: none;
-  }
-}
-.form-chocco .container:after {
+.form-chocco:after {
   content: url(../img/bg/berries-formBG.png);
   display: block;
   position: absolute;
@@ -862,12 +917,33 @@ html {
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
-  .form-chocco .container:after {
+  .form-chocco:after {
     content: none;
   }
 }
+.form-chocco:before {
+  content: url(../img/bg/sheet-formBg.png);
+  display: block;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .form-chocco:before {
+    content: none;
+  }
+}
+.form-chocco .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
 .form-chocco .container .title {
   padding: 4.75rem 0 1.3125rem;
+  z-index: 10;
 }
 
 .form-content {
@@ -966,6 +1042,7 @@ html {
   border-radius: 50%;
   background: #ffffff;
   margin-right: 0.375rem;
+  flex-shrink: 0;
 }
 .form__radio-fake:last-child {
   margin-right: 0;
@@ -988,7 +1065,7 @@ html {
 }
 
 .form__radio-input:checked + .form__checkbox:before {
-  background: #355a49;
+  opacity: 1;
 }
 
 .form__checkbox {
@@ -1000,16 +1077,15 @@ html {
   margin-right: 0.375rem;
 }
 .form__checkbox:before {
-  content: "";
+  content: url(../svg/chek-form.svg);
   display: inline-block;
   height: 0.3125rem;
   width: 0.3125rem;
   border-radius: 50%;
   background: transparent;
   position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 .form__label-subtitle {
@@ -1202,4 +1278,58 @@ html {
 .socials__list .socials__item .socials__link-icon {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+.socials__item-icon {
+  width: 20px;
+  height: 20px;
+  fill: #b2b2b2;
+}
+.socials__item-icon:hover {
+  fill: #000;
+}
+
+.pagination {
+  position: fixed;
+  top: 13.4375rem;
+  right: 2.5rem;
+  z-index: 30;
+}
+.pagination .pagination__item {
+  margin-bottom: 0.625rem;
+}
+.pagination .pagination__item-link {
+  position: relative;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  display: block;
+}
+.pagination .pagination__item-link:after {
+  content: "";
+  display: inline-block;
+  width: 0.375rem;
+  height: 0.375rem;
+  background: #c69;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pagination .pagination__item-link:before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #c69;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.pagination .pagination__item-link:hover:before {
+  opacity: 1;
 }
