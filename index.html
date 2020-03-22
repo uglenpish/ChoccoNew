@@ -19,7 +19,7 @@
 					<div class="logo">
 						<img src="img/icon/logo.svg" alt="" class="logo__icon">
 					</div>
-					<nav class="menu">
+					<nav class="menu menu--burger" id='overlay'>
 						<ul class="menu__list">
 							<li class="menu__item">
 								<a href="index.html" class="menu__link">О нас</a>
@@ -43,6 +43,11 @@
 								<a href="index.html" class="menu__link">Контакты</a>
 							</li>
 						</ul>
+						<a class="menu__burger-close" href="#">
+              <svg class="menu__burger-icon">
+                <use xlink:href="svg/sprite.svg#closeBtn"></use>
+              </svg>
+            </a>
 					</nav>
 					<div class="contacts">
 						<a href="tel.88009039090" class="contacts__tel">8 800 903 90 90</a>
@@ -430,6 +435,17 @@
 			</li>
 		</ul>
 	</div>
-	<script src="script.js"></script>
+	<script>
+		let nav = document.querySelector('#overlay');
+		let body = document.querySelector('body');
+		let burger = document.querySelector('.hamburger');
+
+		function toggleMenu() {
+			nav.classList.toggle('.menu__burger--activ');
+		}
+
+		burger.addEventListener('click', toggleMenu());
+	</script>
+	<script src=""></script>
 </body>
 </html>

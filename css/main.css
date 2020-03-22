@@ -212,9 +212,43 @@ html {
   height: 40px;
 }
 
+.menu {
+  flex: 1;
+}
 @media screen and (max-width: 768px) {
   .menu {
     display: none;
+  }
+  .menu--burger {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #353739;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+  .menu--burger .menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .menu--burger .menu__list .menu__item {
+    margin-right: 0;
+    margin-bottom: 1.25rem;
+  }
+  .menu--burger .menu__list .menu__item:last-child {
+    margin-bottom: 0;
+  }
+  .menu--burger .menu__list .menu__link {
+    font-size: 2.25rem;
+  }
+  .menu .menu__burger-close {
+    display: block;
   }
 }
 .menu__list {
@@ -256,18 +290,6 @@ html {
   background: url(../img/icon/phone%20.png) no-repeat;
 }
 
-@media screen and (max-width: 768px) {
-  .menu__burger--activ {
-    width: 100vw;
-    height: 100vh;
-  }
-  .menu__burger--activ .menu__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-}
 .hamburger {
   display: none;
 }
@@ -280,6 +302,29 @@ html {
   width: 1.5rem;
   height: 1.5rem;
   fill: white;
+}
+
+.menu__burger-close {
+  display: none;
+}
+
+.menu__burger-icon {
+  fill: #fff;
+  height: 1.25rem;
+  width: 1.25rem;
+  position: absolute;
+  top: 5%;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__burger--activ {
+    display: flex;
+    z-index: 100;
+    opacity: 1;
+  }
+  .menu__burger--activ .menu__burger-close {
+    display: block;
+  }
 }
 
 .tablets__menu {
@@ -1314,7 +1359,7 @@ html {
   display: inline-block;
   width: 0.375rem;
   height: 0.375rem;
-  background: #c69;
+  background: #ff9;
   border: 1px solid transparent;
   border-radius: 50%;
   position: absolute;
