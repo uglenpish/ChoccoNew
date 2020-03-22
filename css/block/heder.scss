@@ -22,10 +22,10 @@
 	@include tablets{
 		display: none;
 		&--burger{
-			display: none;
+			display: flex;
 			position: fixed;
 			top: 0;
-			left: 0;
+			left: 100%;
 			bottom: 0;
 			right: 0;
 			background: #353739;
@@ -49,10 +49,6 @@
     			font-size: rem(36px);
     		}
     	}
-		}
-
-		.menu__burger-close{
-			display: block;
 		}
 	}
 
@@ -122,9 +118,9 @@
   top: 5%;
 }
 
-.menu__burger--activ{
-  @include tablets {
-    display: flex;
+.burger--activ{
+	@include tablets{
+    left: 0;
     z-index: 100;
     opacity: 1;
 

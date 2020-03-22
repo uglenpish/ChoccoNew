@@ -22,25 +22,25 @@
 					<nav class="menu menu--burger" id='overlay'>
 						<ul class="menu__list">
 							<li class="menu__item">
-								<a href="index.html" class="menu__link">О нас</a>
+								<a href="#best" class="menu__link">О нас</a>
 							</li>
 							<li class="menu__item">
-								<a href="index.html" class="menu__link">Батончики</a>
+								<a href="#bar" class="menu__link">Батончики</a>
 							</li>
 							<li class="menu__item">
-								<a href="index.html" class="menu__link">Команда</a>
+								<a href="#team" class="menu__link">Команда</a>
 							</li>
 							<li class="menu__item">
-								<a href="index.html" class="menu__link">Меню</a>
+								<a href="#menu" class="menu__link">Меню</a>
 							</li>
 							<li class="menu__item">
-								<a href="index.html" class="menu__link">Отзывы</a>
+								<a href="#reviews" class="menu__link">Отзывы</a>
 							</li>
 							<li class="menu__item">
-								<a href="index.html" class="menu__link">Как мы работаем</a>
+								<a href="#present" class="menu__link">Как мы работаем</a>
 							</li>
 							<li class="menu__item">
-								<a href="index.html" class="menu__link">Контакты</a>
+								<a href="#contact" class="menu__link">Контакты</a>
 							</li>
 						</ul>
 						<a class="menu__burger-close" href="#">
@@ -93,7 +93,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="best">
+		<section class="best" id ='best'>
 			<div class="container">
 				<div class="question-best">
 					<h2 class="title">Почему chocco?</h2>
@@ -138,12 +138,12 @@
 				</div>
 			</div>
 		</section>
-		<section class="bar">
+		<section class="bar" id='bar'>
 			<div class="container">
 				<h2 class="title">Бар Chocco</h2>
 			</div>
 		</section>
-		<section class="team">
+		<section class="team" id='team'>
 			<div class="container">
 			<h2 class="title">Команда</h2>
 				<div class="employee">
@@ -200,7 +200,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="menu-chocco">
+		<section class="menu-chocco" id='menu'>
 			<h2 class="title">Меню</h2>
 			<ul class="accordion__list">
 				<li class="accordion__item">
@@ -238,7 +238,7 @@
 				</li>
 			</ul>
 		</section>
-		<section class="reviews">
+		<section class="reviews" id='reviews'>
 			<div class="container">
 				<div class="title">Отзывы</div>
 				<div class="card">
@@ -272,7 +272,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="present">
+		<section class="present" id='present'>
 			<div class="container">
 				<h2 class="title">Как мы работаем</h2>
 				<div class="video">
@@ -356,7 +356,7 @@
 				</form>
 			</div>
 		</section>
-		<section class="map">
+		<section class="map" id='contact'>
 			<div class="map__content">
 				<img src="img/map.png" alt="" class="map__content-img">
 			</div>
@@ -439,12 +439,22 @@
 		let nav = document.querySelector('#overlay');
 		let body = document.querySelector('body');
 		let burger = document.querySelector('.hamburger');
+		let close = document.querySelector('.menu__burger-close');
+		let links = document.querySelectorAll('.menu__link')
+
+		links.forEach( function(element) {
+			element.addEventListener('click', toggleMenu);
+		});
 
 		function toggleMenu() {
-			nav.classList.toggle('.menu__burger--activ');
+		  nav.classList.toggle('burger--activ');
+		  body.classList.toggle('body--activ');
+			// console.log('asd');
+			// nav.style.color='red';
 		}
 
-		burger.addEventListener('click', toggleMenu());
+		burger.addEventListener('click', toggleMenu);
+		close.addEventListener('click', toggleMenu)
 	</script>
 	<script src=""></script>
 </body>

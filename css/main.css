@@ -55,6 +55,10 @@ html {
   }
 }
 
+.body--activ {
+  overflow: hidden;
+}
+
 .wrapper {
   height: 100%;
   width: 100%;
@@ -220,10 +224,10 @@ html {
     display: none;
   }
   .menu--burger {
-    display: none;
+    display: flex;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 100%;
     bottom: 0;
     right: 0;
     background: #353739;
@@ -246,9 +250,6 @@ html {
   }
   .menu--burger .menu__list .menu__link {
     font-size: 2.25rem;
-  }
-  .menu .menu__burger-close {
-    display: block;
   }
 }
 .menu__list {
@@ -317,12 +318,12 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-  .menu__burger--activ {
-    display: flex;
+  .burger--activ {
+    left: 0;
     z-index: 100;
     opacity: 1;
   }
-  .menu__burger--activ .menu__burger-close {
+  .burger--activ .menu__burger-close {
     display: block;
   }
 }
