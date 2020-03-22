@@ -1295,6 +1295,11 @@ html {
   right: 2.5rem;
   z-index: 30;
 }
+@media screen and (max-width: 768px) {
+  .pagination {
+    display: none;
+  }
+}
 .pagination .pagination__item {
   margin-bottom: 0.625rem;
 }

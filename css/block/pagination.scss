@@ -4,6 +4,10 @@
   right: 2.5rem;
   z-index: 30;
 
+  @include tablets{
+  	display: none;
+  }
+
 	.pagination__item{
 		margin-bottom: rem(10px);
 
