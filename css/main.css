@@ -1231,6 +1231,9 @@ html {
   min-height: 40.625rem;
   background: #f8faf9;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   .bar {
@@ -1246,6 +1249,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 .bar .container:before {
   content: url(../img/bg/barChocco-bg2.png);
@@ -1255,6 +1259,161 @@ html {
   height: 25.25rem;
   right: 0;
   bottom: -10rem;
+}
+
+.slider {
+  display: flex;
+}
+.slider__list {
+  display: flex;
+}
+.slider__list .title {
+  font-size: 36px;
+}
+.slider__list .slider__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider__list .slider__item .slider__content {
+  width: 80%;
+}
+.slider__list .slider__item .slider__content-text {
+  font-size: 18px;
+  color: #666666;
+  font-weight: 400;
+  margin-bottom: 2.4375rem;
+}
+.slider__list .slider__item .slider__content .slider__specifications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.875rem;
+}
+.slider__list .slider__item .slider__content .slider__specifications .specifications__content {
+  margin-right: 3.125rem;
+}
+.slider__list .slider__item .slider__content .slider__specifications .specifications__content .subtitle {
+  font-size: 18px;
+  color: #666666;
+}
+.slider__list .slider__item .slider__content .slider__specifications .specifications__content .value {
+  font-size: 18px;
+  font-weight: 700;
+}
+.slider__list .slider__item .slider__content .slider__content-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.slider__list .slider__item .slider__content .slider__content-order .price {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 300;
+  margin-right: 4.375rem;
+  position: relative;
+}
+.slider__list .slider__item .slider__content .slider__content-order .price:before {
+  content: url(../img/icon/rub.svg);
+  width: 1.5rem;
+  height: 2.125rem;
+  right: -1.875rem;
+  position: absolute;
+}
+.slider__list .slider__item .slider__content .slider__content-order .btn {
+  background: #365a49;
+  color: #fff;
+}
+.slider__list .slider__item .slider__content .slider__content-order .btn:hover {
+  background: #2e4e3f;
+}
+
+.col-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin-right: 1.875rem;
+}
+.col-bar:last-child {
+  margin-right: 0;
+}
+
+.slider__info {
+  margin-bottom: 2.4375rem;
+}
+.slider__info .slider__icon {
+  background: #86c3d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5625rem 1.1875rem;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.slider__info .slider__icon:hover + .composition {
+  right: 273px;
+  opacity: 0.9;
+}
+.slider__info .slider__icon-svg {
+  width: 3.1875rem;
+  height: 3.3125rem;
+  fill: #fff;
+}
+.slider__info .slider__icon .slider__icon-text {
+  display: flex;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.slider__info .composition {
+  position: absolute;
+  background: #fff;
+  opacity: 0;
+  padding: 20px 30px;
+  top: 87px;
+  right: -9999px;
+}
+.slider__info .composition__list .composition__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+.slider__info .composition__list .composition__item:last-child {
+  margin-bottom: 0;
+}
+.slider__info .composition__list .composition__item-svg {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  margin-right: 1.25rem;
+}
+.slider__info .composition__list .composition__item-text {
+  margin-right: 1.25rem;
+}
+.slider__info .composition__list .composition__item-weight {
+  flex: 1;
+  text-align: right;
+}
+
+.bar__scroll .bar__scroll-svg {
+  width: 1.0625rem;
+  fill: #fff;
+  stroke: #000;
+  stroke-width: 2px;
+  fill-rule: evenodd;
+  height: 32px;
+  cursor: pointer;
+}
+.bar__scroll .rihgt {
+  transform: rotate(180deg);
 }
 
 .footer {

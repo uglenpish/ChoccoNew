@@ -1,16 +1,17 @@
 let nav = document.querySelector('#overlay');
-// let body = document.querySelector('body');
-// let burger = document.querySelector('.hamburger');
+		let body = document.querySelector('body');
+		let burger = document.querySelector('.hamburger');
+		let close = document.querySelector('.menu__burger-close');
+		let links = document.querySelectorAll('.menu__link')
 
-// function toggleMenu() {
-// 	nav.classList.toggle('.menu__burger--activ');
-// }
+		links.forEach( function(element) {
+			element.addEventListener('click', toggleMenu);
+		});
 
-// burger.addEventListener('click', toggleMenu());
+		function toggleMenu() {
+		  nav.classList.toggle('burger--activ');
+		  body.classList.toggle('body--activ');
+		}
 
-let nav = document.querySelector('#overlay');
-let burger = document.querySelector('.hamburger');
-
-burger.addEventListener('click', function(){
-	console.log('asd');
-})
+		burger.addEventListener('click', toggleMenu);
+		close.addEventListener('click', toggleMenu)

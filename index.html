@@ -139,8 +139,104 @@
 			</div>
 		</section>
 		<section class="bar" id='bar'>
+			<div class="bar__scroll">
+				<svg class="bar__scroll-svg left">
+					<use xlink:href="svg/sprite.svg#arrow-left"></use>
+				</svg>
+			</div>
 			<div class="container">
-				<h2 class="title">Бар Chocco</h2>
+				<div class="slider">
+					<ul class="slider__list">
+						<li class="slider__item">
+							<div class="col-bar">
+								<div class="slider__avatar">
+									<img src="img/choco-bar.png" alt="" class="slider__avatar-picture">
+								</div>
+							</div>
+							<div class="col-bar">
+								<div class="slider__info">
+									<div class="slider__icon">
+										<svg class="slider__icon-svg">
+											<use xlink:href="svg/sprite.svg#choco-bar"></use>
+										</svg>
+										<span class="slider__icon-text">состав</span>
+									</div>
+									<div class="composition">
+										<ul class="composition__list">
+											<li class="composition__item">
+												<svg class="composition__item-svg">
+													<use xlink:href="svg/sprite.svg#grape"></use>
+												</svg>
+												<span class="composition__item-text">Виноград</span>
+												<span class="composition__item-weight">25г</span>
+											</li>
+											<li class="composition__item">
+												<svg class="composition__item-svg">
+													<use xlink:href="svg/sprite.svg#nut"></use>
+												</svg>
+												<span class="composition__item-text">Грецкий орех</span>
+												<span class="composition__item-weight">32г</span>
+											</li>
+											<li class="composition__item">
+												<svg class="composition__item-svg">
+													<use xlink:href="svg/sprite.svg#almond"></use>
+												</svg>
+												<span class="composition__item-text">Кунжутное семя</span>
+												<span class="composition__item-weight">20г</span>
+											</li>
+											<li class="composition__item">
+												<svg class="composition__item-svg">
+													<use xlink:href="svg/sprite.svg#washing"></use>
+												</svg>
+												<span class="composition__item-text">Сухое молоко</span>
+												<span class="composition__item-weight">10г</span>
+											</li>
+											<li class="composition__item">
+												<svg class="composition__item-svg">
+													<use xlink:href="svg/sprite.svg#apitherapy"></use>
+												</svg>
+												<span class="composition__item-text">Зам. сахара</span>
+												<span class="composition__item-weight">4г</span>
+											</li>
+											<li class="composition__item">
+												<svg class="composition__item-svg">
+													<use xlink:href="svg/sprite.svg#beans"></use>
+												</svg>
+												<span class="composition__item-text">Какао бобы</span>
+												<span class="composition__item-weight">4г</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<h3 class="title">Батончик "гранола виноград"</h3>
+								<div class="slider__content">
+									<div class="slider__content-text">Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и како бобы.</div>
+									<div class="slider__specifications">
+										<div class="specifications__content">
+											<div class="subtitle">Калориийность</div>
+											<div class="value">110 ккал</div>
+										</div>
+										<div class="specifications__content">
+											<div class="subtitle">Вес</div>
+											<div class="value">55 грамм</div>
+										</div>								
+									</div>
+									<div class="slider__content-order">
+										<div class="price">140</div>
+										<a href="" class="btn">Заказать</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="slider__item"></li>
+						<li class="slider__item"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bar__scroll">
+				<svg class="bar__scroll-svg rihgt">
+					<use xlink:href="svg/sprite.svg#arrow-left"></use>
+				</svg>
 			</div>
 		</section>
 		<section class="team" id='team'>
@@ -436,26 +532,26 @@
 		</ul>
 	</div>
 	<script>
-		let nav = document.querySelector('#overlay');
-		let body = document.querySelector('body');
-		let burger = document.querySelector('.hamburger');
-		let close = document.querySelector('.menu__burger-close');
-		let links = document.querySelectorAll('.menu__link')
+		// let nav = document.querySelector('#overlay');
+		// let body = document.querySelector('body');
+		// let burger = document.querySelector('.hamburger');
+		// let close = document.querySelector('.menu__burger-close');
+		// let links = document.querySelectorAll('.menu__link')
 
-		links.forEach( function(element) {
-			element.addEventListener('click', toggleMenu);
-		});
+		// links.forEach( function(element) {
+		// 	element.addEventListener('click', toggleMenu);
+		// });
 
-		function toggleMenu() {
-		  nav.classList.toggle('burger--activ');
-		  body.classList.toggle('body--activ');
-			// console.log('asd');
-			// nav.style.color='red';
-		}
+		// function toggleMenu() {
+		//   nav.classList.toggle('burger--activ');
+		//   body.classList.toggle('body--activ');
+		// 	// console.log('asd');
+		// 	// nav.style.color='red';
+		// }
 
-		burger.addEventListener('click', toggleMenu);
-		close.addEventListener('click', toggleMenu)
+		// burger.addEventListener('click', toggleMenu);
+		// close.addEventListener('click', toggleMenu)
 	</script>
-	<script src=""></script>
+	<script src="script.js"></script>
 </body>
 </html>
