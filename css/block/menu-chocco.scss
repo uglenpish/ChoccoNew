@@ -38,6 +38,7 @@
 			height: 100%;
 			padding-left: 0.9375rem;
     	padding-bottom: 4.5rem;
+    	cursor: pointer;
     	@include phones{
     		width: rem(80px);
   		}
@@ -72,16 +73,28 @@
     		top: 1.5625rem;
     		right: 1.875rem;
     		z-index: 1;
+
+    		&-link-svg{
+    			fill: #fff;
+  				height: rem(20px);
+  				width: rem(20px);
+  				// position: absolute;
+  				// top: 5%;
+    		}
 			}
 		}
+	}
+}
 
-		&-text--activ{
-			width: rem(520px);
-			// width: 55%;
+.menu-text--activ{
+	.accordion__item-text{
+		width: rem(520px);
+		@include tablets{
+			width: 300px;
+		}
 
-			@include tablets{
- 				width: 0 !important;
-			}
+		@include phones{
+			width: 120px;
 		}
 	}
 }

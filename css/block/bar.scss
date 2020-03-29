@@ -8,6 +8,10 @@
 		@include flexible-center ();
 		margin: 0;
 
+		@include tablets {
+				width: 80%;
+			}
+
 		&:before{
 			content: url(../img/bg/barChocco-bg2.png);
 			position: absolute;
@@ -26,14 +30,27 @@
 		display: flex;
 
 		.title{
-		font-size: 36px;
+			font-size: 36px;
+
+			@include tablets {
+				text-align: center;
+				font-size: rem(30px);
+			}
 		}
 
 		.slider__item{
 			@include flexible-center ();
-			
+
+			@include tablets {
+				@include flexible-column ();
+			}
+
 			.slider__content{
 				width: 80%;
+
+				@include tablets {
+					width: 100%;
+				}
 				&-text{
 					font-size: 18px;
 					color: #666666;
@@ -45,6 +62,11 @@
 					@include flexible-center ();
 					justify-content: flex-start;
 					margin-bottom: rem(30px);
+
+					@include tablets {
+						justify-content: center;
+					}
+
 					.specifications__content{
 						margin-right: rem(50px);
 						
@@ -63,6 +85,10 @@
 				.slider__content-order{
 					@include flexible-center ();
 					justify-content: flex-start;
+
+					@include tablets {
+						justify-content: center;
+					}
 
 					.price{
 						font-size: 60px;
@@ -102,10 +128,21 @@
 	&:last-child{
 		margin-right: 0;
 	}
+
+	@include tablets {
+		align-items: center;
+		text-align: center;
+		margin-right: 0;
+		width: 100%;
+	}
 }
 
 .slider__info{
 	margin-bottom: rem(39px);
+
+	@include tablets {
+		display: none;
+	}
 	.slider__icon{
 		background: #86c3d7;
 		@include flexible-column ();

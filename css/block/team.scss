@@ -34,9 +34,12 @@
 			@include flexible-column;
 		}
 		
-		.employee__item{
+		.accordion{
 			width: rem(220px);
 			padding-right: rem(20px);
+			overflow: hidden;
+			@include flexible-column;
+
 			&:last-child{
 				padding-right: 0;
 			}
@@ -49,11 +52,7 @@
 				}
 			}
 			
-			.accordion{
-				overflow: hidden;
-				@include flexible-column;
-			
-				&__ava{
+			&__ava{
 					width: rem(220px);
 					height: rem(290px);
 					overflow: hidden;
@@ -70,6 +69,7 @@
 					color: #000000;
 					font-weight: 700;
 					position: relative;
+					cursor: pointer;
 
 					@include tablets{
 						order: 1;
@@ -86,18 +86,23 @@
 					}
 				}
 				&__dropdown{
-					transition: max-height .5s;
-  				height: 0;
+					transition: max-height 1s;
   				text-align: center;
+  				height: 0;
+  				overflow: hidden;
 
   				@include tablets{
 						order: 3;
-					}
+				}
+
+				&-wrap{
+					// height: 0;
 				}
 			}
 		}
 	}
 }
+
 
 .show--activ{
 	.accordion__ava{
