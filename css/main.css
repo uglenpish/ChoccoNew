@@ -1279,9 +1279,12 @@ html {
 
 .slider {
   display: flex;
+  overflow: hidden;
+  width: 100%;
 }
 .slider__list {
   display: flex;
+  right: 0;
 }
 .slider__list .title {
   font-size: 36px;
@@ -1436,7 +1439,7 @@ html {
   background: #fff;
   opacity: 0;
   padding: 20px 30px;
-  top: 87px;
+  top: 96px;
   right: -9999px;
 }
 .slider__info .composition__list .composition__item {
@@ -1470,7 +1473,7 @@ html {
   height: 32px;
   cursor: pointer;
 }
-.bar__scroll .rihgt {
+.bar__scroll .right {
   transform: rotate(180deg);
 }
 
