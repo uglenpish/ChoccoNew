@@ -1,25 +1,44 @@
 let left = document.querySelector(".left");
 let right = document.querySelector(".right");
-let widthContainer = document.querySelector('.slider').clientWidth;
 let slider = document.querySelector(".slider__list");
-var pos = 0;
+
+right.addEventListener("click", function(e) {
+  loop("right", e);
+});
+ 
+left.addEventListener("click", function(e) {
+  loop("left", e);
+});
+
+function loop(direction, e) {
+  e.preventDefault();
+  if (direction === "right") {
+    slider.appendChild(slider.firstElementChild);
+  } else {
+    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+  }
+}
 
 
-function calcWidthList() {
-  const itemsCount = slider.children.length;
-  const widthList = itemsCount * widthContainer; 
-	  slider.style.width = `${widthList}px`;
+// let widthContainer = document.querySelector('.slider').clientWidth;
+// var pos = 0;
+
+
+// function calcWidthList() {
+//   const itemsCount = slider.children.length;
+//   const widthList = itemsCount * widthContainer; 
+// 	  slider.style.width = `${widthList}px`;
 	
-}
+// }
 
-function handlerClick(event) {
-    if (event.target.tagName === 'S') {
-        slide(event.target);
-        console.log('1')
-    }
-}
+// function handlerClick(event) {
+//     if (event.target.tagName === 'S') {
+//         slide(event.target);
+//         console.log('1')
+//     }
+// }
 
-window.addEventListener('load', calcWidthList);
+// window.addEventListener('load', calcWidthList);
 
 
 

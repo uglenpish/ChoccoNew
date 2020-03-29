@@ -1277,9 +1277,13 @@ html {
   bottom: -10rem;
 }
 
+.slider__wrapper {
+  overflow: hidden;
+}
+
 .slider {
   display: flex;
-  overflow: hidden;
+  position: relative;
   width: 100%;
 }
 .slider__list {
@@ -1295,10 +1299,17 @@ html {
     font-size: 1.875rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .slider__list .title {
+    text-align: center;
+    font-size: 1.75rem;
+  }
+}
 .slider__list .slider__item {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 0 0 100%;
 }
 @media screen and (max-width: 768px) {
   .slider__list .slider__item {
@@ -1370,6 +1381,11 @@ html {
   right: -1.875rem;
   position: absolute;
 }
+@media screen and (max-width: 480px) {
+  .slider__list .slider__item .slider__content .slider__content-order .price {
+    margin-right: 3.125rem;
+  }
+}
 .slider__list .slider__item .slider__content .slider__content-order .btn {
   background: #365a49;
   color: #fff;
@@ -1419,7 +1435,7 @@ html {
   cursor: pointer;
 }
 .slider__info .slider__icon:hover + .composition {
-  right: 273px;
+  right: 98px;
   opacity: 0.9;
 }
 .slider__info .slider__icon-svg {
@@ -1439,7 +1455,7 @@ html {
   background: #fff;
   opacity: 0;
   padding: 20px 30px;
-  top: 96px;
+  top: 0;
   right: -9999px;
 }
 .slider__info .composition__list .composition__item {
