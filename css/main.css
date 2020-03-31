@@ -1047,7 +1047,6 @@ html {
 .form-content .form__col .form__row .form__label-input:focus {
   border: 0.1875rem solid #dde2bd;
   padding: 20px 10px;
-  border: 3px solid transparent;
   font-size: 18px;
   color: #000000;
   font-family: "Open Sans";
@@ -1288,6 +1287,7 @@ html {
 }
 .slider__list {
   display: flex;
+  width: 100%;
   right: 0;
 }
 .slider__list .title {
@@ -1309,7 +1309,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 0 100%;
+  flex: 1;
 }
 @media screen and (max-width: 768px) {
   .slider__list .slider__item {
@@ -1493,6 +1493,17 @@ html {
   transform: rotate(180deg);
 }
 
+.slider__avatar {
+  max-width: 29.625rem;
+  max-height: 26.375rem;
+  flex: 1;
+}
+.slider__avatar-picture {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+}
+
 .footer {
   position: absolute;
   left: 0;
@@ -1619,4 +1630,41 @@ html {
 }
 .pagination .pagination__item-link:hover:before {
   opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(51, 53, 55, 0.99);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  padding: 2.3125rem 3.75rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;
+  justify-content: space-between;
+  align-items: center;*/
+}
+
+.modal__title {
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  background: #365a49;
+  color: #fff;
 }

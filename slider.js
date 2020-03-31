@@ -1,42 +1,49 @@
 let left = document.querySelector(".left");
 let right = document.querySelector(".right");
 let slider = document.querySelector(".slider__list");
+let widthContainer = document.querySelector('.slider').clientWidth;
+const item = document.querySelector(".slider__item");
+let controls = document.querySelector('.bar__scroll');
 
-right.addEventListener("click", function(e) {
-  loop("right", e);
-});
- 
-left.addEventListener("click", function(e) {
-  loop("left", e);
-});
+function calcWidthList() {
+    const itemsCount = slider.children.length;
+    const widthList = itemsCount * widthContainer; 
 
-function loop(direction, e) {
-  e.preventDefault();
-  if (direction === "right") {
-    slider.appendChild(slider.firstElementChild);
-  } else {
-    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
-  }
+    slider.style.width = `${widthList}px`;
 }
 
-
-// let widthContainer = document.querySelector('.slider').clientWidth;
-// var pos = 0;
-
-
-// function calcWidthList() {
-//   const itemsCount = slider.children.length;
-//   const widthList = itemsCount * widthContainer; 
-// 	  slider.style.width = `${widthList}px`;
-	
-// }
-
 // function handlerClick(event) {
-//     if (event.target.tagName === 'S') {
+//     if (event.target.tagName === 'SVG') {
 //         slide(event.target);
-//         console.log('1')
+//         console.log('1');
 //     }
 // }
+
+window.addEventListener('load', calcWidthList);
+
+// right.addEventListener("click", function(e) {
+//   loop("right", e);
+// });
+ 
+// left.addEventListener("click", function(e) {
+//   loop("left", e);
+// });
+
+// function loop(direction, e) {
+//   e.preventDefault();
+//   if (direction === "right") {
+//     slider.appendChild(slider.firstElementChild);
+//   } else {
+//     slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+//   }
+// }
+
+
+
+
+
+
+
 
 // window.addEventListener('load', calcWidthList);
 

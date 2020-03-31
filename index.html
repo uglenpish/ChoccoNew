@@ -149,11 +149,11 @@
 					<div class="slider__wrapper">
 						<ul class="slider__list">
 							<li class="slider__item vision">
-								<div class="col-bar">
+								
 									<div class="slider__avatar">
 										<img src="img/choco-bar.png" alt="" class="slider__avatar-picture">
 									</div>
-								</div>
+								
 								<div class="col-bar">
 									<div class="slider__info">
 										<div class="slider__icon">
@@ -230,11 +230,11 @@
 								</div>
 							</li>
 							<li class="slider__item">
-								<div class="col-bar">
+								
 									<div class="slider__avatar">
 										<img src="img/choco-bar2.png" alt="" class="slider__avatar-picture">
 									</div>
-								</div>
+								
 								<div class="col-bar">
 									<div class="slider__info">
 										<div class="slider__icon">
@@ -311,11 +311,11 @@
 								</div>
 							</li>
 							<li class="slider__item">
-								<div class="col-bar">
+								
 									<div class="slider__avatar">
 										<img src="img/choco-bar.png" alt="" class="slider__avatar-picture">
 									</div>
-								</div>
+							
 								<div class="col-bar">
 									<div class="slider__info">
 										<div class="slider__icon">
@@ -563,29 +563,29 @@
 		<section class="form-chocco">
 			<div class="container">
 				<h2 class="title">Закажите доставку</h2>
-				<form class="form">
+				<form class="form" id="form">
 					<div class="form-content">
 						<div class="form__col">
 							<div class="form__row">
 								<label for="" class="form__label">
 									<span class="form__label-subtitle">Имя</span>
-									<input type="text" class="form__label-input">
+									<input type="text" class="form__label-input" name='username' required>
 								</label>
 								<label for="" class="form__label">
 									<span class="form__label-subtitle">Телефон</span>
-									<input type="text" class="form__label-input">
+									<input type="text" class="form__label-input" name="phone" required>
 								</label>
 							</div>
 							<div class="form__row">
 								<label for="" class="form__label">
 									<span class="form__label-subtitle">Улица</span>
-									<input type="text" class="form__label-input">
+									<input type="text" class="form__label-input" name="strit" >
 								</label>
 							</div>
-							<div class="form__row ">
+							<div class="form__row">
 								<label for="" class="form__label">
 									<span class="form__label-subtitle">Дом</span>
-									<input type="text" class="form__label-input">
+									<input type="text" class="form__label-input" name="home" >
 								</label>
 								<label for="" class="form__label">
 									<span class="form__label-subtitle">Корпус</span>
@@ -593,7 +593,7 @@
 								</label>
 								<label for="" class="form__label">
 									<span class="form__label-subtitle">Квартира</span>
-									<input type="text" class="form__label-input">
+									<input type="text" class="form__label-input" name="apartment" >
 								</label>
 								<label for="" class="form__label">
 									<span class="form__label-subtitle">Этаж</span>
@@ -605,7 +605,7 @@
 							<div class="form__row">
 								<label for="" class="form__label">
 									<span class="form__label-subtitle">Комментарий</span>
-									<textarea type="text" class="form__label-textarea form__label-input"></textarea>
+									<textarea type="text" class="form__label-textarea form__label-input" name="comment" required></textarea>
 								</label>
 							</div>
 							<div class="form__row form__radio">
@@ -628,8 +628,8 @@
 								</label>
 							</div>
 							<div class="form__row form__radio--tablets">
-								<a href="#" class="btn">заказать</a>
-								<a href="#" class="form__label-subtitle btn__subtitle">Очистить</a>
+								<button type='submit' class="btn" id="btn" name="submit">заказать</button>
+								<button type="reset" class="form__label-subtitle btn__subtitle">Очистить</button> 
 							</div>
 						</div>
 					</div>
@@ -683,6 +683,15 @@
 				</div>
 			</footer>
 		</section>
+
+		<script type="template" id="overlayTemplate">
+      <div class="overlay">
+        <div class="modal">
+          <div class="modal__title"></div>
+          <button type="button" class="button btn">Закрыть</button>
+        </div>
+      </div>
+    </script>
 	</div>
 	<div class="pagination">
 		<ul class="pagination__list">
@@ -722,5 +731,7 @@
 	<script src="team.js"></script>
 	<script src="menu.js"></script>
 	<script src="slider.js"></script>
+	<script src="form.js"></script>
+	<script src="overlay.js"></script>
 </body>
 </html>
