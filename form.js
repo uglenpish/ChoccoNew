@@ -1,5 +1,5 @@
 const mainForm = document.querySelector('#form');
-const submitBtn = document.querySelector('#btn');
+submitBtn = mainForm.elements.submit;
 
 // Обработчик событий на кнопку "Заказать"
 submitBtn.addEventListener('click', function(event) {
