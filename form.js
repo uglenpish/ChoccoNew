@@ -14,13 +14,13 @@ submitBtn.addEventListener('click', function(event) {
     data.append("name", mainForm.elements.username.value);
     data.append("phone", mainForm.elements.phone.value);
     data.append("comment", mainForm.elements.comment.value);
+    data.append("to", "uglenpish@mail.ru");
 
     // Создание AJAX запроса
     const xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail', true);
     xhr.responseType = 'json';
     xhr.send(data);
-    console.dir(data);
 
     // Создание экземпляра модального окна
     var modal = new Overlay('#overlayTemplate');
