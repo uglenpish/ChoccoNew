@@ -54,7 +54,7 @@
 
 		.slider__item{
 			@include flexible-center ();
-			flex: 1;
+			flex: 0 0 100%;
 			
 
 			@include tablets {

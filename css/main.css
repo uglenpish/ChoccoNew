@@ -614,6 +614,7 @@ html {
 }
 .card__wrap .card {
   display: flex;
+  transition: all 1s;
 }
 
 .card__item {
@@ -697,6 +698,7 @@ html {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 0.9375rem;
+  z-index: 10;
 }
 .photo__link:last-child {
   margin-right: 0;
@@ -1323,7 +1325,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex: 0 0 100%;
 }
 @media screen and (max-width: 768px) {
   .slider__list .slider__item {

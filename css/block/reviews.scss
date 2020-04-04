@@ -41,6 +41,7 @@
 	align-items: stretch;
 	.card{
 		display: flex;
+		transition:all 1s;
 		// right: 0;
 	}
 }
@@ -118,6 +119,7 @@
 		border-radius: 50%;
 		overflow: hidden;
 		margin-right: rem(15px);
+		z-index: 10;
 		&:last-child{
 			margin-right: 0;
 		}
