@@ -39,6 +39,8 @@ button:focus {
 
 body {
   margin: 0;
+  font-family: "Alegreya Sans";
+  font-weight: 400;
 }
 
 html {
@@ -62,9 +64,11 @@ html {
 .wrapper {
   height: 100%;
   width: 100%;
-  font-family: "Alegreya Sans";
-  font-weight: 400;
   overflow: hidden;
+}
+.wrapper .main__content {
+  height: 100vh;
+  transition: transform 1s;
 }
 
 .container {
@@ -196,18 +200,19 @@ html {
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.header .container {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
   width: 100%;
-  margin-bottom: 80px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
 }
 
 .logo {
@@ -297,12 +302,16 @@ html {
 @media screen and (max-width: 768px) {
   .hamburger {
     display: initial;
+    position: fixed;
+    right: 5%;
+    top: 5%;
   }
 }
 .hamburger .hamburger__icon {
   width: 1.5rem;
   height: 1.5rem;
   fill: white;
+  filter: drop-shadow(0 0 5px #000);
 }
 
 .menu__burger-close {
@@ -1402,11 +1411,11 @@ html {
     margin-right: 3.125rem;
   }
 }
-.slider__list .slider__item .slider__content .slider__content-order .btn {
+.slider__list .slider__item .slider__content .slider__content-order .btn--bar {
   background: #365a49;
   color: #fff;
 }
-.slider__list .slider__item .slider__content .slider__content-order .btn:hover {
+.slider__list .slider__item .slider__content .slider__content-order .btn--bar:hover {
   background: #2e4e3f;
 }
 
@@ -1623,8 +1632,9 @@ html {
   display: inline-block;
   width: 0.375rem;
   height: 0.375rem;
-  background: #ff9;
+  background: #fff;
   border: 1px solid transparent;
+  box-shadow: 0px 0px 5px black;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -1636,7 +1646,8 @@ html {
   display: inline-block;
   width: 17px;
   height: 17px;
-  border: 1px solid #c69;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 5px black;
   border-radius: 50%;
   position: absolute;
   top: 50%;
@@ -1646,6 +1657,9 @@ html {
 }
 .pagination .pagination__item-link:hover:before {
   opacity: 1;
+}
+.pagination .is-active .pagination__item-link:before {
+  opacity: 1 !important;
 }
 
 .overlay {
@@ -1673,14 +1687,13 @@ html {
   justify-content: space-between;
   align-items: center;*/
 }
+.modal .btn {
+  background: #365a49;
+  color: #fff;
+}
 
 .modal__title {
   line-height: 1;
   text-align: center;
   margin-bottom: 1.25rem;
-}
-
-.btn {
-  background: #365a49;
-  color: #fff;
 }

@@ -22,8 +22,9 @@
 				display: inline-block;
 				width: rem(6px);
 				height: rem(6px);
-				background: #ff9;
+				background: #fff;
 				border: 1px solid transparent;
+				box-shadow: 0px 0px 5px black;
 				border-radius: 50%;
 				position: absolute;
 				top: 50%;
@@ -36,7 +37,8 @@
 				display: inline-block;
 				width: 17px;
 				height: 17px;
-				border: 1px solid #c69;
+				border: 1px solid #fff;
+				box-shadow: 0px 0px 5px black;
 				border-radius: 50%;
 				position: absolute;
 				top: 50%;
@@ -50,6 +52,14 @@
 					opacity: 1;
 				}
 			}
+		}
+	}
+
+	.is-active{
+		.pagination__item-link{
+			&:before{
+				opacity: 1 !important;
+			}	
 		}
 	}
 }

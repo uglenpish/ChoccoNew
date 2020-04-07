@@ -41,6 +41,9 @@ button{
 
 body{
   margin: 0;
+  font-family: "Alegreya Sans";
+  font-weight: 400;
+  
 }
 
 html{
@@ -60,9 +63,13 @@ html{
 .wrapper{
   height: 100%;
   width: 100%;
-  font-family: "Alegreya Sans";
-  font-weight: 400;
   overflow: hidden;
+  
+
+  .main__content{
+  height: 100vh;
+  transition: transform 1s;
+  }
 }
 
 .container{
