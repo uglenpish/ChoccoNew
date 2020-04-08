@@ -4,19 +4,27 @@
   left: 0;
   right: 0;
   z-index: 10;
-
-  .container{
-		@include flexible-center ();
+  @include flexible-center ();
 		justify-content: space-between;
  		padding: 20px 0;
  		width: 100%;
-  }
+
+  // .container{
+		// @include flexible-center ();
+		// justify-content: space-between;
+ 	// 	padding: 20px 0;
+ 	// 	width: 100%;
+  // }
 }
 
 .logo{
 	display: block;
 	width: 55px;
 	height: 40px;
+
+	@include tablets {
+		// padding-left: 20px;
+	}
 }
 
 .menu{
@@ -103,8 +111,8 @@
 		display: initial;
 		position: fixed;
 		right: 5%;
-		top: 5%;
-		// z-index: 100;
+		top: 3%;
+		z-index: 1;
 	}
 	.hamburger__icon {
   	width: 1.5rem;

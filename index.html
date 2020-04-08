@@ -14,7 +14,7 @@
 <body>
 	<div class="wrapper">
 
-		<header class="header">
+		<!-- <header class="header">
 			<div class="container">
 				<div class="logo">
 					<img src="img/icon/logo.svg" alt="" class="logo__icon">
@@ -22,25 +22,25 @@
 				<nav class="menu menu--burger" id='overlay'>
 					<ul class="menu__list">
 						<li class="menu__item">
-							<a href="#best" class="menu__link">О нас</a>
+							<a href="#best" class="menu__link" data-scroll-to = '1'>О нас</a>
 						</li>
 						<li class="menu__item">
-							<a href="#bar" class="menu__link">Батончики</a>
+							<a href="#bar" class="menu__link" data-scroll-to = '2'>Батончики</a>
 						</li>
 						<li class="menu__item">
-							<a href="#team" class="menu__link">Команда</a>
+							<a href="#team" class="menu__link" data-scroll-to = '3'>Команда</a>
 						</li>
 						<li class="menu__item">
-							<a href="#menu" class="menu__link">Меню</a>
+							<a href="#menu" class="menu__link" data-scroll-to = '4'>Меню</a>
 						</li>
 						<li class="menu__item">
-							<a href="#reviews" class="menu__link">Отзывы</a>
+							<a href="#reviews" class="menu__link" data-scroll-to = '5'>Отзывы</a>
 						</li>
 						<li class="menu__item">
-							<a href="#present" class="menu__link">Как мы работаем</a>
+							<a href="#present" class="menu__link" data-scroll-to = '6'>Как мы работаем</a>
 						</li>
 						<li class="menu__item">
-							<a href="#contact" class="menu__link">Контакты</a>
+							<a href="#contact" class="menu__link" data-scroll-to = '8'>Контакты</a>
 						</li>
 					</ul>
 					<a class="menu__burger-close" href="#">
@@ -58,12 +58,57 @@
 					</svg>
 				</button>
 			</div>
-		</header>
+		</header> -->
 
 		<main class="main__content">
+			<!-- <header class="header">
+				<div class="container">
+					<div class="logo">
+						<img src="img/icon/logo.svg" alt="" class="logo__icon">
+					</div>
+					<nav class="menu menu--burger" id='overlay'>
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#best" class="menu__link" data-scroll-to = '1'>О нас</a>
+							</li>
+							<li class="menu__item">
+								<a href="#bar" class="menu__link" data-scroll-to = '2'>Батончики</a>
+							</li>
+							<li class="menu__item">
+								<a href="#team" class="menu__link" data-scroll-to = '3'>Команда</a>
+							</li>
+							<li class="menu__item">
+								<a href="#menu" class="menu__link" data-scroll-to = '4'>Меню</a>
+							</li>
+							<li class="menu__item">
+								<a href="#reviews" class="menu__link" data-scroll-to = '5'>Отзывы</a>
+							</li>
+							<li class="menu__item">
+								<a href="#present" class="menu__link" data-scroll-to = '6'>Как мы работаем</a>
+							</li>
+							<li class="menu__item">
+								<a href="#contact" class="menu__link" data-scroll-to = '8'>Контакты</a>
+							</li>
+						</ul>
+						<a class="menu__burger-close" href="#">
+							<svg class="menu__burger-icon">
+								<use xlink:href="./img/svg/sprite.svg#closeBtn"></use>
+							</svg>
+						</a>
+					</nav>
+					<div class="contacts">
+						<a href="tel.88009039090" class="contacts__tel">8 800 903 90 90</a>
+					</div>
+					<button class="hamburger">
+						<svg class='hamburger__icon'>
+							<use xlink:href='./img/svg/sprite.svg#hamburger'></use>
+						</svg>
+					</button>
+				</div>
+			</header> -->
 			<section class="welcome section is-active">
 				<div class="container">
-					<!-- <header class="header">
+					<header class="header">
 						<div class="logo">
 							<img src="img/icon/logo.svg" alt="" class="logo__icon">
 						</div>
@@ -105,7 +150,7 @@
 								<use xlink:href='./img/svg/sprite.svg#hamburger'></use>
 							</svg>
 						</button>
-					</header> -->
+					</header>
 
 					<div class="hero">
 						<div class="hero__media">
@@ -613,9 +658,26 @@
 			<section class="present section" id='present'>
 				<div class="container">
 					<h2 class="title">Как мы работаем</h2>
-					<div class="video">
-						<img src="img/dummy.png" alt="" class="video__dummy">
-					</div>
+					
+						<div class="player">
+							<div class="player__wrapper">
+								<video src="video/videoplayback.mp4" class="player__wrapper-elem" poster="img/video-bg.png" id="video"></video>
+								<img src="img/icon/play.png" alt="" class="player__wrapper-bg play">
+							</div>
+							<div class="player__controls">
+								<div class="duration">
+									<button class="duration__btn play"></button>
+									<input type="range" class="duration__crawl" id="crawl"
+									min = '0' max = '237'>
+								</div>
+								<div class="sound">
+									<img src="img/icon/volum.svg" alt="" class="sound__btn" id="soundBtn">
+									<input type="range" class="duration__crawl sound__crawl" id="Volum" min='0' max='10'
+									>
+								</div>
+							</div>
+						</div>
+				
 				</div>
 			</section>
 			<section class="form-chocco section">
@@ -797,6 +859,8 @@
   </script>
 	<script src="scripts/map.js"></script>
 	<script src="scripts/scroll.js"></script>
+	<script src="scripts/player.js"></script>
+
 	
 </body>
 </html>
