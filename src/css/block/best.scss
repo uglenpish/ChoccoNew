@@ -1,0 +1,155 @@
+.best{
+	@include viewport-section();
+	@include flexible-center ();
+	background-image: url(../img/bg/fon-best.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	position: relative;
+	
+	@include phones{
+		background: none;
+	}
+
+	&:before{
+		content: url(../img/bg/bg-best.png);
+		display: block;
+		position: absolute;
+		bottom: -8rem;
+		left: 0;
+		z-index: 1;
+
+		@include phones{
+			content: none;
+		}
+	}
+
+	.container{
+		@include flexible-column ();
+		position: relative;
+	}
+}
+
+.question-best{
+	width: rem(450px);
+	margin-bottom: rem(55px);
+
+	@include phones{
+		width: auto;
+	}
+	
+	.title{
+		color: #000000;
+		text-align: center;
+	}
+
+	&__subtitle{
+		font-size: rem(18px);
+		color: #666666;
+		text-align: center;
+
+		@include phones{
+		}
+	}
+}
+
+.advantage{
+	&__list{
+		display: flex;
+		justify-content: space-between;
+		@include phones{
+			@include flexible-column();
+		}
+	}
+
+	.advantage__item{
+		text-align: center;
+		flex: 1;
+		margin-right: rem(5px);
+		position: relative;
+
+		&:before{
+			content: url(../img/icon/best-decor.svg);
+    	position: absolute;
+    	top: 2.8125rem;
+    	left: -14%;
+		}
+		&:first-child:before{
+			content: none;
+		}
+		
+
+		&:last-child{
+			margin-right: 0;
+		}
+
+		@include tablets{
+			&:before{
+				content: none;
+			}
+		}
+		@include phones{
+			@include flexible-center();
+			width: auto;
+			margin-bottom: rem(40px);
+			margin-right: 0;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		&-icon{
+			width: rem(130px);
+			height: rem(130px);
+			background-color: #f2f5f4;
+			border-radius: 50%;
+			position: relative;
+			margin: 0 auto;
+			margin-bottom: rem(40px);
+
+			@include phones{
+				margin-right: rem(15px);
+				margin-bottom: 0;
+				flex-shrink: 0;
+			}
+		
+			.advantage__item-asd{
+				width: rem(65px);
+				height: rem(65px);
+				position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		transform: translate(-50%, -50%);
+    	}
+		}
+
+		&-text{
+			
+		}
+
+		&-title{
+			font-size: rem(27px);
+			color: #000000;
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: rem(25px);
+
+			@include phones{
+				text-align: left !important;
+				margin-bottom: rem(10px);
+			}
+		}
+
+		&-description{
+			font-size: rem(18px);
+			color: #666666;
+			font-weight: 300;
+			text-align: center;
+
+			@include phones{
+				text-align: left;
+				width: auto;
+			}
+		}
+	}
+}

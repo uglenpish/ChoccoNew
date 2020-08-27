@@ -1,0 +1,125 @@
+.team{
+	@include viewport-section ();
+	@include flexible-column ();
+	position: relative;
+
+	&:after{
+  	content: url(../img/bg/team-bg.png);
+  	display: block;
+  	position: absolute;
+  	bottom: -8%;
+  	left: 5%;
+  	z-index: 1;
+  }
+
+	.container{
+		@include flexible-column ();
+		position: relative;
+
+		
+	.title{
+			text-align: center;
+			margin-bottom: rem(55px);
+		}
+	}
+}
+
+.employee{
+	width: 100%;
+	height: 70%;
+	&__list{
+		@include flexible-center ();
+		align-items: flex-start;
+
+		@include tablets{
+			@include flexible-column;
+		}
+		
+		.accordion{
+			width: rem(220px);
+			padding-right: rem(20px);
+			overflow: hidden;
+			@include flexible-column;
+
+			&:last-child{
+				padding-right: 0;
+			}
+
+			@include tablets {
+			padding-right: 0;
+				margin-bottom: rem(10px);
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+			
+			&__ava{
+					width: rem(220px);
+					height: rem(290px);
+					overflow: hidden;
+					margin-bottom: rem(20px);
+
+					@include tablets{
+						height: 0;
+						order: 2;
+					}
+				}
+
+				&__name{
+					font-size: rem(21px);
+					color: #000000;
+					font-weight: 700;
+					position: relative;
+					cursor: pointer;
+
+					@include tablets{
+						order: 1;
+					  margin-bottom: rem(10px);
+					}
+
+					&:after{
+						content: '';
+						position: absolute;
+						top: rem(7px);
+						right: rem(-22px);
+						border: rem(8px) solid transparent;
+						border-top: rem(8px) solid #365a49;
+					}
+				}
+				&__dropdown{
+					transition: max-height 1s;
+  				text-align: center;
+  				height: 0;
+  				overflow: hidden;
+
+  				@include tablets{
+						order: 3;
+				}
+
+				&-wrap{
+					// height: 0;
+					
+					.accordion__dropdown-title{
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.show--activ{
+	.accordion__ava{
+		height: rem(290px) !important;
+	}
+					
+	.accordion__name:after{
+		border-top-width: 0 !important;
+		border-bottom: rem(8px) solid #365a49 !important;
+	}
+					
+	.accordion__dropdown{
+		height: 100% !important;
+	}
+}
