@@ -503,7 +503,7 @@ html {
 }
 
 .bar .container:before {
-  content: url(../img/bg/barChocco-bg2.png);
+  content: url(./img/bg/barChocco-bg2.png);
   position: absolute;
   display: block;
   width: 10.9375rem;
@@ -589,7 +589,7 @@ html {
 }
 
 .slider__list .slider__item .slider__content .slider__content-order .price:before {
-  content: url(../img/icon/rub.svg);
+  content: url(./img/icon/rub.svg);
   width: 1.5rem;
   height: 2.125rem;
   right: -1.875rem;
@@ -700,7 +700,7 @@ html {
   content: '';
   width: 17px;
   height: 35px;
-  background: url(../img/icon/arrow-left.svg);
+  background: url(./img/icon/arrow-left.svg);
   display: block;
 }
 
@@ -728,14 +728,14 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../img/bg/fon-best.png);
+  background-image: url(./img/bg/fon-best.png);
   background-repeat: no-repeat;
   background-position: left center;
   position: relative;
 }
 
 .best:before {
-  content: url(../img/bg/bg-best.png);
+  content: url(./img/bg/bg-best.png);
   display: block;
   position: absolute;
   bottom: -8rem;
@@ -780,7 +780,7 @@ html {
 }
 
 .advantage .advantage__item:before {
-  content: url(../img/icon/best-decor.svg);
+  content: url(./img/icon/best-decor.svg);
   position: absolute;
   top: 2.8125rem;
   left: -14%;
@@ -855,7 +855,7 @@ html {
 
 .footer .container .adress .contacts .contacts__tel:before {
   text-align: center;
-  background: url(../img/icon/phone-footer.svg) no-repeat;
+  background: url(./img/icon/phone-footer.svg) no-repeat;
 }
 
 .footer .container .adress .contacts__tel {
@@ -864,7 +864,7 @@ html {
 
 .footer .container .adress .contacts__tel:before {
   text-align: center;
-  background: url(../img/icon/phone-footer.svg) no-repeat;
+  background: url(./img/icon/phone-footer.svg) no-repeat;
 }
 
 .socials__list {
@@ -901,14 +901,14 @@ html {
   height: 100vh;
   min-height: 40.625rem;
   background: #d3deda;
-  background-image: url(../img/bg/bg-form.png);
+  background-image: url(./img/bg/bg-form.png);
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
 }
 
 .form-chocco:after {
-  content: url(../img/bg/berries-formBG.png);
+  content: url(./img/bg/berries-formBG.png);
   display: block;
   position: absolute;
   bottom: 10%;
@@ -917,7 +917,7 @@ html {
 }
 
 .form-chocco:before {
-  content: url(../img/bg/sheet-formBg.png);
+  content: url(./img/bg/sheet-formBg.png);
   display: block;
   position: absolute;
   bottom: 10%;
@@ -1074,7 +1074,7 @@ html {
 }
 
 .form__checkbox:before {
-  content: url(../img/svg/chek-form.svg);
+  content: url(./img/svg/chek-form.svg);
   display: inline-block;
   height: 0.3125rem;
   width: 0.3125rem;
@@ -1153,7 +1153,7 @@ html {
   margin-right: 10px;
   width: 15px;
   height: 14px;
-  background: url(../img/icon/phone%20.png) no-repeat;
+  background: url(./img/icon/phone%20.png) no-repeat;
 }
 
 .hamburger {
@@ -1228,7 +1228,7 @@ html {
   width: 100%;
   height: 100vh;
   min-height: 40.625rem;
-  background: url(../img/bg/menu-bg2.png) center center/cover no-repeat;
+  background: url(./img/bg/menu-bg2.png) center center/cover no-repeat;
   color: #ffffff;
   position: relative;
   display: flex;
@@ -1310,17 +1310,17 @@ html {
 }
 
 .bg-milk--modify {
-  background: url(../img/bg/milk-menu.png) center center/cover no-repeat;
+  background: url(./img/bg/milk-menu.png) center center/cover no-repeat;
   opacity: 1;
 }
 
 .bg-honey--modify {
-  background: url(../img/bg/honey-menu.png) center center/cover no-repeat;
+  background: url(./img/bg/honey-menu.png) center center/cover no-repeat;
   opacity: 1;
 }
 
 .bg-berries--modify {
-  background: url(../img/bg/berries-menu.png) center center/cover no-repeat;
+  background: url(./img/bg/berries-menu.png) center center/cover no-repeat;
 }
 
 .overlay {
@@ -1424,7 +1424,7 @@ html {
 }
 
 .present:before {
-  content: url(../img/bg/present-bg.png);
+  content: url(./img/bg/present-bg.png);
   display: block;
   position: absolute;
   bottom: -13%;
@@ -1537,7 +1537,7 @@ html {
 }
 
 .reviews:after {
-  content: url(../img/bg/riviews-bottomBg.png);
+  content: url(./img/bg/riviews-bottomBg.png);
   display: block;
   position: absolute;
   bottom: -14%;
@@ -1546,7 +1546,7 @@ html {
 }
 
 .reviews:before {
-  content: url(../img/bg/reviews-topBg.png);
+  content: url(./img/bg/reviews-topBg.png);
   display: block;
   position: absolute;
   top: 8%;
@@ -1582,7 +1582,7 @@ html {
   background-color: #f8faf9;
   justify-content: left;
   margin-bottom: 1.25rem;
-  background-image: url(../img/bg/bg-card.png);
+  background-image: url(./img/bg/bg-card.png);
   background-position: right top;
   background-repeat: no-repeat;
   padding: 3.125rem 2.8125rem 2.1875rem;
@@ -1690,7 +1690,7 @@ html {
 }
 
 .team:after {
-  content: url(../img/bg/team-bg.png);
+  content: url(./img/bg/team-bg.png);
   display: block;
   position: absolute;
   bottom: -8%;
@@ -1785,7 +1785,7 @@ html {
   width: 100%;
   height: 100vh;
   min-height: 40.625rem;
-  background: url(../img/bg/hero-choccoBg.png) 78% center/40% no-repeat, url(../img/bg/fon-hero.png) right center/contain no-repeat, #86c3d7;
+  background: url(./img/bg/hero-choccoBg.png) 78% center/40% no-repeat, url(./img/bg/fon-hero.png) right center/contain no-repeat, #86c3d7;
 }
 
 .welcome .container {
@@ -1798,7 +1798,7 @@ html {
 }
 
 .welcome .container:after {
-  content: url(../img/bg/hero-berriesBg.png);
+  content: url(./img/bg/hero-berriesBg.png);
   display: block;
   position: absolute;
   bottom: -3.125rem;
@@ -2097,7 +2097,7 @@ html {
   }
 
   .welcome {
-    background: url(../img/bg/fon-hero.png) right 20%/70% no-repeat, #86c3d7;
+    background: url(./img/bg/fon-hero.png) right 20%/70% no-repeat, #86c3d7;
   }
 
   .welcome .container {

@@ -1,6 +1,6 @@
 .menu-chocco{
 	@include viewport-section();
-	background: url(../img/bg/menu-bg2.png) center center/cover no-repeat;
+	background: url(./img/bg/menu-bg2.png) center center/cover no-repeat;
 	color: #ffffff;
 	position: relative;
 	display: flex;
@@ -104,18 +104,18 @@
 
 
 .bg-milk--modify{
-	background: url(../img/bg/milk-menu.png)
+	background: url(./img/bg/milk-menu.png)
 	center center/cover no-repeat;
 	opacity: 1;
 }
 
 .bg-honey--modify{
-	background: url(../img/bg/honey-menu.png) 
+	background: url(./img/bg/honey-menu.png) 
 	center center/cover no-repeat;
 	opacity: 1;
 }
 
 .bg-berries--modify{
-	background: url(../img/bg/berries-menu.png) 
+	background: url(./img/bg/berries-menu.png) 
 	center center/cover no-repeat;
 }

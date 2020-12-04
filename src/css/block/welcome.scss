@@ -1,12 +1,12 @@
 .welcome{
 	@include viewport-section ();
-	background: url(../img/bg/hero-choccoBg.png) 
+	background: url(./img/bg/hero-choccoBg.png) 
 	78% center/40% no-repeat,  
-	url(../img/bg/fon-hero.png) 
+	url(./img/bg/fon-hero.png) 
 	right center/contain no-repeat, 
 	#86c3d7;
 	@include tablets{
-		background: url(../img/bg/fon-hero.png) 
+		background: url(./img/bg/fon-hero.png) 
 		right 20%/70% no-repeat, #86c3d7;
 	}
 
@@ -19,7 +19,7 @@
 		}
 
 		&:after{
-  		content: url(../img/bg/hero-berriesBg.png);
+  		content: url(./img/bg/hero-berriesBg.png);
   		display: block;
   		position: absolute;
   		bottom: rem(-50px);

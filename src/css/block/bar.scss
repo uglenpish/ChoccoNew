@@ -13,7 +13,7 @@
 			}
 
 		&:before{
-			content: url(../img/bg/barChocco-bg2.png);
+			content: url(./img/bg/barChocco-bg2.png);
 			position: absolute;
 			display: block;
 			width: rem(175px);
@@ -116,7 +116,7 @@
 						position: relative;
 
 						&:before{
-							content: url(../img/icon/rub.svg);
+							content: url(./img/icon/rub.svg);
 							width: rem(24px);
 							height: rem(34px);
 							right: rem(-30px);
@@ -249,7 +249,7 @@
     	content: ''; 
     	width: 17px;
     	height: 35px;
-    	background: url(../img/icon/arrow-left.svg);
+    	background: url(./img/icon/arrow-left.svg);
     	display: block;
     }
 	}

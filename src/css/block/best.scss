@@ -1,7 +1,7 @@
 .best{
 	@include viewport-section();
 	@include flexible-center ();
-	background-image: url(../img/bg/fon-best.png);
+	background-image: url(./img/bg/fon-best.png);
 	background-repeat: no-repeat;
 	background-position: left center;
 	position: relative;
@@ -11,7 +11,7 @@
 	}
 
 	&:before{
-		content: url(../img/bg/bg-best.png);
+		content: url(./img/bg/bg-best.png);
 		display: block;
 		position: absolute;
 		bottom: -8rem;
@@ -68,7 +68,7 @@
 		position: relative;
 
 		&:before{
-			content: url(../img/icon/best-decor.svg);
+			content: url(./img/icon/best-decor.svg);
     	position: absolute;
     	top: 2.8125rem;
     	left: -14%;

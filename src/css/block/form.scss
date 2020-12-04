@@ -1,13 +1,13 @@
 .form-chocco{
 	@include viewport-section ();
 	background: #d3deda;
-	background-image: url(../img/bg/bg-form.png);
+	background-image: url(./img/bg/bg-form.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	position: relative;
 
 	&:after{
-		content: url(../img/bg/berries-formBG.png);
+		content: url(./img/bg/berries-formBG.png);
 		display: block;
 		position: absolute;
 		bottom: 10%;
@@ -20,7 +20,7 @@
 	}
 
 	&:before{
-		content: url(../img/bg/sheet-formBg.png);
+		content: url(./img/bg/sheet-formBg.png);
 		display: block;
 		position: absolute;
 		bottom: 10%;
@@ -182,7 +182,7 @@
   margin-right: rem(6px);
   
   &:before{
-    content:  url(../img/svg/chek-form.svg);
+    content:  url(./img/svg/chek-form.svg);
    	display: inline-block;
     height: rem(5px);
     width: rem(5px);
